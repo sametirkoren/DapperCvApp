@@ -18,7 +18,11 @@ namespace CvApp.DataAccess.Concrete.Dapper
 
         public bool CheckUser(string userName, string password)
         {
-            var user = _dbConnection.QueryFirstOrDefault<AppUser>("select * from AppUsers where UserName=@userName and Password=@password");
+            var user = _dbConnection.QueryFirstOrDefault<AppUser>("select * from AppUsers where UserName=@userName and Password=@password",new { 
+                userName = userName,
+                password = password
+            
+            });
             return user != null;
         }
     }

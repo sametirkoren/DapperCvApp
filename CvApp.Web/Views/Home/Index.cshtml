@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+
+}
+
+@model List<CvApp.Entities.Concrete.Skill>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        @foreach (var item in Model)
+        {
+            <span>@item.Id</span>
+
+            <span>@item.Description</span>
+            <br />
+        }
+    </body>
+</html>

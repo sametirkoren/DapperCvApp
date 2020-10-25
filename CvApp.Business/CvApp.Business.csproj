@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CvApp.DataAccess\CvApp.DataAccess.csproj" />
+    <ProjectReference Include="..\CvApp.DTO\CvApp.DTO.csproj" />
+    <ProjectReference Include="..\CvApp.Entities\CvApp.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

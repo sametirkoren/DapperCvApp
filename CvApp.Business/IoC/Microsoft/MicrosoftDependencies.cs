@@ -32,7 +32,10 @@ namespace CvApp.Business.IoC.Microsoft
             services.AddScoped<IAppUserRepository,DpAppUserRepository>();
             services.AddScoped<IAppUserService,AppUserManager>();
 
+           
+
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();
+            services.AddTransient<IValidator<AppUserPasswordDto>, AppUserPasswordDtoValidator>();
             services.AddTransient<IValidator<CertificationAddDto>, CertificationAddDtoValidator>();
             services.AddTransient<IValidator<CertificationUpdateDto>, CertificationUpdateDtoValidator>();
             services.AddTransient<IValidator<EducationAddDto>, EducationAddDtoValidator>();
@@ -45,6 +48,7 @@ namespace CvApp.Business.IoC.Microsoft
             services.AddTransient<IValidator<SkillUpdateDto>, SkillUpdateDtoValidator>();
             services.AddTransient<IValidator<SocialMediaIconAddDto>, SocialMediaIconAddDtoValidator>();
             services.AddTransient<IValidator<SocialMediaIconUpdateDto>, SocialMediaIconUpdateDtoValidator>();
+ 
         }
     }
 }

@@ -15,5 +15,7 @@ namespace CvApp.DataAccess.Interfaces
         /// <param name="password"></param>
         /// <returns></returns>
         bool CheckUser(string userName, string password);
+
+        AppUser FindByName(string userName);
     }
 }

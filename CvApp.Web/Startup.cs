@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CvApp.Business.IoC.Microsoft;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -38,6 +39,8 @@ namespace CvApp.Web
 
             });
             services.AddCustomDependencies(Configuration);
+
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews().AddFluentValidation();
         }
 

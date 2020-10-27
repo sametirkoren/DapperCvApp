@@ -1,10 +1,11 @@
-﻿using System;
+﻿using CvApp.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CvApp.Business.Interfaces
 {
-    public interface IAppUserService
+    public interface IAppUserService : IGenericService<AppUser>
     {
 
         /// <summary>
@@ -14,5 +15,6 @@ namespace CvApp.Business.Interfaces
         /// <param name="password"></param>
         /// <returns></returns>
         bool CheckUser(string userName, string password);
+        AppUser FindByName(string userName);
     }
 }

@@ -25,5 +25,14 @@ namespace CvApp.DataAccess.Concrete.Dapper
             });
             return user != null;
         }
+
+        public AppUser FindByName(string userName)
+        {
+            return  _dbConnection.QueryFirstOrDefault<AppUser>("select * from AppUsers where UserName=@userName", new
+            {
+                userName = userName
+            });
+
+        }
     }
 }

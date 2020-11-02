@@ -1,0 +1,15 @@
+﻿@model CvApp.DTO.DTOs.AppUserDtos.AppUserListDto
+<section class="resume-section" id="about">
+    <div class="resume-section-content">
+        <h1 class="mb-0">
+            @Model.FirstName
+            <span class="text-primary">@Model.LastName</span>
+        </h1>
+        <div class="subheading mb-5">
+            @Model.Address · @Model.PhoneNumber ·
+            <a href="mailto:@Model.Email">@Model.Email</a>
+        </div>
+        <p class="lead mb-5">@Model.ShortDescription</p>
+        <GetIcons app-user-id="@Model.Id"></GetIcons>
+    </div>
+</section>

@@ -30,6 +30,11 @@
                 <a asp-action="ChangePassword" asp-controller="Home" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="sifre" ? "active" : "")">Şifre Değişikliği</a>
                 <a asp-action="Index" asp-controller="Certification" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="sertifika" ? "active" : "")">Sertifikalarım</a>
                 <a asp-action="Index" asp-controller="Education" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="egitim" ? "active" : "")">Eğitim Bilgilerim</a>
+                <a asp-action="Index" asp-controller="Experience" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="deneyim" ? "active" : "")">Deneyim Bilgilerim</a>
+                <a asp-action="Index" asp-controller="Interest" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="hobi" ? "active" : "")">Hobilerim</a>
+                <a asp-action="Index" asp-controller="Skill" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="yetenek" ? "active" : "")">Yeteneklerim</a>
+                <a asp-action="Index" asp-controller="SocialMediaIcon" asp-area="Admin" class="list-group-item list-group-item-action @(TempData["active"]?.ToString()=="ikon" ? "active" : "")">Sosyal Medya</a>
+                <a asp-action="LogOut" asp-controller="Auth" asp-area=""  class="list-group-item list-group-item-action">Çıkış Yap</a>
 
             </div>
         </div>

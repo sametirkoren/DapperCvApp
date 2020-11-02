@@ -31,8 +31,9 @@ namespace CvApp.Business.IoC.Microsoft
             services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
             services.AddScoped<IAppUserRepository,DpAppUserRepository>();
             services.AddScoped<IAppUserService,AppUserManager>();
+            services.AddScoped<ISocialMediaIconRepository, DpSocialMediaIconRepository>();
+            services.AddScoped<ISocialMediaIconService, SocialMediaIconManager>();
 
-           
 
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();
             services.AddTransient<IValidator<AppUserPasswordDto>, AppUserPasswordDtoValidator>();

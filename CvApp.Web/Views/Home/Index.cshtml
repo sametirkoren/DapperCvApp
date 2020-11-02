@@ -1,22 +1,56 @@
-﻿@{
+﻿@{ 
     Layout = null;
-
 }
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Samet İrkören'in Kişisel Web Sayfası" />
+    <meta name="author" content="Samet İrkören" />
+    <title>CvApp - Samet İrkören</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    @await Component.InvokeAsync("NavbarComponent") 
 
-@model List<CvApp.Entities.Concrete.Skill>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        @await Component.InvokeAsync("AboutComponent")
+        <hr class="m-0" />
+        <!-- Experience-->
+        @await Component.InvokeAsync("ExperienceComponent")
+        <hr class="m-0" />
+        <!-- Education-->
+        @await Component.InvokeAsync("EducationComponent")
+        <hr class="m-0" />
+        <!-- Skills-->
+        @await Component.InvokeAsync("SkillComponent")
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Test</title>
-    </head>
-    <body>
-        @foreach (var item in Model)
-        {
-            <span>@item.Id</span>
+        <hr class="m-0" />
+        <!-- Interests-->
+        @await Component.InvokeAsync("InterestComponent")
 
-            <span>@item.Description</span>
-            <br />
-        }
-    </body>
+        <hr class="m-0" />
+        <!-- Awards-->
+        @await Component.InvokeAsync("CertificationComponent")
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
+</body>
 </html>

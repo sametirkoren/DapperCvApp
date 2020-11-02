@@ -10,9 +10,10 @@ namespace CvApp.Business.ValidationRules
     {
         public SocialMediaIconUpdateDtoValidator()
         {
-            RuleFor(I => I.AppUserId).InclusiveBetween(1, int.MaxValue).WithMessage("AppUserId alanı boş geçilemez");
-            RuleFor(I => I.Id).InclusiveBetween(1, int.MaxValue).WithMessage("Id alanı boş geçilemez");
 
+            RuleFor(I => I.Id).InclusiveBetween(1, int.MaxValue).WithMessage("Id alanı boş geçilemez");
+            RuleFor(I => I.Icon).NotEmpty().WithMessage("İkon boş bırakılamaz");
+            RuleFor(I => I.Link).NotEmpty().WithMessage("Link boş bırakılamaz");
         }
     }
 }

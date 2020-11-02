@@ -11,6 +11,8 @@ namespace CvApp.Business.ValidationRules
         public InterestUpdateDtoValidator()
         {
             RuleFor(I => I.Id).InclusiveBetween(1, int.MaxValue).WithMessage("Id alanı boş geçilemez");
+            RuleFor(I => I.Description).NotEmpty().WithMessage("Açıklama alanı boş geçilemez");
+
         }
     }
 }

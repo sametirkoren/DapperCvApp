@@ -1,0 +1,39 @@
+﻿@model List<CvApp.DTO.DTOs.EducationDtos.EducationListDto>
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Eğitim</h2>
+        @foreach (var item in Model)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">@item.Title</h3>
+                    <div class="subheading mb-3">@item.SubTitle</div>
+              
+                    <p>@{
+                        if (item.Title.ToLower().Contains("lise"))
+                        {
+                            <span>Diploma Notu :  @item.Description</span>
+                        }
+                        if (item.Title.ToLower().Contains("üniversite"))
+                        {
+                            <span>Genel Not Ortalaması : @item.Description</span>
+                        }
+                    }</p>
+                </div>
+                     <div class="flex-shrink-0"><span class="text-primary">@item.StartDate.ToString("Y") - @{
+
+                    if (item.EndDate.HasValue)
+                    {
+                        <span>@(((DateTime)item.EndDate).ToString("Y"))</span>
+                    }
+                    else
+                    {
+                        <span>Devam Ediyor</span>
+                    }
+                }</span></div>
+            </div>
+        }
+
+
+    </div>
+</section>
